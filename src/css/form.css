@@ -93,8 +93,45 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  gap: 8px;
+  align-items: stretch;
+  gap: 6px;
   padding: 8px 4px;
   background-color: #fff;
+
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 0.5;
+  letter-spacing: 0.02em;
+}
+.info-wrapper span {
+  font-weight: bold;
+}
+/*кнопка лоад*/
+
+.js-load-more {
+  display: block;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  background-color: #4e75ff;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  margin: 20px auto;
+  transition:
+    background-color 0.3s ease-in-out,
+    transform 0.2s ease-in-out;
+}
+.js-load-more:hover {
+  background-color: #6c8cff;
+}
+.load-more-hidden {
+  display: none;
 }
