@@ -47,10 +47,17 @@ async function handleSubmit(event) {
 
     if (data.hits.length > 0) {
       createGallery(data.hits);
-      if (page * per_page < data.totalHits) {
-        console.log(data.totalHits / per_page);
-
+      if (per_page < data.totalHits) {
         showLoadMoreButton();
+      } else {
+        hideLoadMoreButton();
+        iziToast.info({
+          message: "We're sorry, but you've reached the end of search results",
+          position: 'bottomCenter',
+          backgroundColor: '#4391ea',
+          messageColor: '#FFFFFF',
+          maxWidth: 432,
+        });
       }
     } else {
       iziToast.error({
